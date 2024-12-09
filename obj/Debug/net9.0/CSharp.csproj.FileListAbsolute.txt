@@ -1,0 +1,14 @@
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\bin\Debug\net9.0\CSharp.exe
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\bin\Debug\net9.0\CSharp.deps.json
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\bin\Debug\net9.0\CSharp.runtimeconfig.json
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\bin\Debug\net9.0\CSharp.dll
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\bin\Debug\net9.0\CSharp.pdb
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.GeneratedMSBuildEditorConfig.editorconfig
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.AssemblyInfoInputs.cache
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.AssemblyInfo.cs
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.csproj.CoreCompileInputs.cache
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.dll
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\refint\CSharp.dll
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.pdb
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\CSharp.genruntimeconfig.cache
+S:\Arjun Naik\UpSkilling\dotnet\CSharp\obj\Debug\net9.0\ref\CSharp.dll
