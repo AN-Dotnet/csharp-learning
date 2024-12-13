@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using CSharp.classes;
 using csharpLearning;
 using csharpLearning.classes;
 
@@ -266,8 +267,11 @@ Console.WriteLine("----- Constructor -----");
 Automobile automobile = new("Tramstrasse");
 Console.WriteLine(automobile.Address);
 
-
-
+/*
+    ----------- static -----------
+*/
+Console.WriteLine("----- static -----");
+TimeUtility.PrintTime();
 
 
 
