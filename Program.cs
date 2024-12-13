@@ -273,6 +273,77 @@ Console.WriteLine(automobile.Address);
 Console.WriteLine("----- static -----");
 TimeUtility.PrintTime();
 
+/*
+    ----------- List -----------
+*/
+Console.WriteLine("----- List -----");
+// CRUD
+// Create
+List<int> numberList = new List<int>{1, 2, 3, 4, 5}; // = [1, 2, 3, 4, 5]
+
+// Read
+foreach (var item in numberList)
+{
+    Console.WriteLine(item);
+}
+
+// Update
+
+numberList.Add(6); // add it to the back of the list
+// insert
+numberList.Insert(6,7); // (index, value);
+numberList.Insert(7,2);
+numberList.Insert(8,9);
+numberList.Insert(9,2);
+
+var newNum = numberList.Where((i) => i == 2); // this will returns brand new List
+newNum.ToList().ForEach(item => Console.WriteLine(item));
+
+/* below will not work because Array.ForEach is specifically designed to work with arrays, not with collections like List<T>. 
+ Since numberList is a List<int>, not an array, Array.ForEach will not work directly.
+*/
+// Array.ForEach(newNum, item => Console.WriteLine(item)); 
+// Array.ForEach(numberList, item => Console.WriteLine(item)); 
+
+Console.WriteLine("--printing-");
+// we can use foreach on the List directly
+numberList.ForEach(item => Console.WriteLine(item)); 
+
+Console.WriteLine("--delete-");
+// Delete
+numberList.Remove(2); // removes the value 2 ....removes the first occurrence of that matched value
+numberList.ForEach(item => Console.WriteLine(item));
+// delete at index
+numberList.RemoveAt(3); // removes the value 2 ....removes the first occurrence of that matched value
+numberList.ForEach(item => Console.WriteLine(item));
+
+/*
+    ----------- Records -----------
+*/
+Console.WriteLine("----- Records -----");
+Person person1 = new ("Teddy", "Smith", new string[1] { "555-1234"});
+Person person2 = new ("Teddy", "Smith", new string[1] { "555-1234"});
+
+// Immutability (Shallow Immutability)
+// person1.LastName = "smith"; // this will not allow us to change 
+// person1.PhoneNumbers[0] = "222-324234"; // but this will allow us to change
+
+// Equality ........ can be checked based on the below
+// value type - 1. Check the type 2. Check the contents
+// Referential - by memory (hex code)
+Console.WriteLine(person1 == person2);
+
+// Non-destructive Mutation (Copy)
+Person person3 = person2 with {LastName = "Brewski"};
+Console.WriteLine(person3.ToString());
+
+public record Person(string FirstName, string LastName, string[] PhoneNumbers); // defining and initialising the record
+
+
+
+
+
+
 
 
 
