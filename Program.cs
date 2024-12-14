@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using csharp.classes;
 using CSharp.classes;
 using csharpLearning;
 using csharpLearning.classes;
@@ -109,6 +110,7 @@ if (aquariumFish is string) {
     ----------- Enum -----------
     enum is a value type (stack data structure is used)
 */
+// codeNo.2 here
 Console.WriteLine("-----Enum-----");
 Console.WriteLine(Warning.codeRed);
 Console.WriteLine((int)Warning.codeRed);
@@ -337,17 +339,124 @@ Console.WriteLine(person1 == person2);
 Person person3 = person2 with {LastName = "Brewski"};
 Console.WriteLine(person3.ToString());
 
+// codeNo.1 here
+
+/*
+    ----------- Delegates -----------
+*/
+Console.WriteLine("----- Delegates -----");
+Action loggerAction = () => {
+    System.Console.WriteLine("This is simple");
+};
+
+Func<int, int> loggerFunc = (int x) => {
+    return x + 2; 
+};
+
+// SuperCustom loggerFuncWithCustomFunc = (int x) => {
+//     return x + 2;
+// };
+
+// public delegate int SuperCustom(int x); // custom delegate
+
+var list = Enumerable.Range(1, 10).Select(i => i * 3).ToList();
+
+// callback
+var callCall = (Action func) =>
+{
+    func();
+};
+
+callCall(() => Console.WriteLine("callback"));
+callCall(loggerAction);
+
+// Built-in Delegates
+// C# provides built-in generic delegate types, such as Func, Action, and Predicate.
+DelegateExample.main();
+
+// 1.Action
+// Represents a method that has no return value.
+Action<string> greet = name => Console.WriteLine($"Hello, {name}");
+greet("Alice"); // Output: Hello, Alice
+
+// 2. Func
+// Represents a method that returns a value.
+Func<int, int, int> sum = (x, y) => x + y;
+Console.WriteLine(sum(10, 20)); // Output: 30
+
+// 3. Predicate
+// Represents a method that returns a bool.
+Predicate<int> isPositive = num => num > 0;
+Console.WriteLine(isPositive(10)); // Output: True
+
+/*
+    ----------- Dictionary -----------
+*/
+Console.WriteLine("----- Dictionary -----");
+// 1. Create a dictionary
+Dictionary<int, string> students = new Dictionary<int, string>();
+
+// 2. Add elements
+students.Add(1, "Alice");
+students.Add(2, "Bob");
+students.Add(3, "Charlie");
+
+// 3. Access elements
+Console.WriteLine(students[1]); // Output: Alice
+
+students.Add(4, "Diana");
+students[5] = "Eve"; // Another way to add
+
+// 3. Access Elements
+string studentName = students[2]; // Retrieves "Bob"
+Console.WriteLine(studentName);
+
+// Note: If the key doesn't exist, it will throw a KeyNotFoundException. Use TryGetValue to safely retrieve values.
+if (students.TryGetValue(3, out string student))
+{
+    Console.WriteLine($"value found is {student}");
+}
+else
+{
+    Console.WriteLine("Key not found!");
+}
+
+// 4. Check for Keys or Values
+bool hasKey = students.ContainsKey(2); // Checks if key 2 exists
+bool hasValue = students.ContainsValue("Alice"); // Checks if "Alice" exists
+
+// 5. Iterate Over a Dictionary
+foreach (var kvp in students)
+{
+    Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+}
+
+foreach (int key in students.Keys)
+{
+    Console.WriteLine($"Key: {key}");
+}
+
+foreach (var val in students.Values)
+{
+    Console.WriteLine($"Value: {val}");
+}
+
+/*
+    ----------- Hash -----------
+*/
+Console.WriteLine("----- Hash -----");
+
+
+
+
+
+
+
+
+// codeNo.1 :
 public record Person(string FirstName, string LastName, string[] PhoneNumbers); // defining and initialising the record
 
-
-
-
-
-
-
-
-
-
+// codeNo.2 :
 enum Warning {
     codeRed,
     CodeBlue,
